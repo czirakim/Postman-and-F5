@@ -1,0 +1,36 @@
+[{
+        "kind": "tm:ltm:virtual:virtualstate",
+        "name": "VIP1",
+        "partition": "Common",
+        "fullPath": "/Common/VIP1",
+        "addressStatus": "yes",
+        "autoLasthop": "default",
+        "cmpEnabled": "yes",
+        "connectionLimit": 0,
+        "destination": "/Common/10.0.0.111:80",
+        "enabled": true,
+        "gtmScore": 0,
+        "ipProtocol": "tcp",
+        "mask": "255.255.255.255",
+        "mirror": "disabled",
+        "mobileAppTunnel": "disabled",
+        "nat64": "disabled",
+        "pool": "/Common/pool1",
+        "source": "0.0.0.0/0",
+        "sourceAddressTranslation": {
+                "type": "automap"
+            },
+        "sourcePort": "preserve",
+        "synCookieStatus": "not-activated",
+        "translateAddress": "enabled",
+        "translatePort": "enabled",
+        "vlansDisabled": true,
+        "profiles": [
+                    "/Common/http"
+            ],
+        "rules": [
+                "/Common/example_uri_1",
+                "/Common/hsl-irule"
+            ]
+    }
+]
