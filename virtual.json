@@ -1,4 +1,5 @@
-[{
+[
+    {
         "kind": "tm:ltm:virtual:virtualstate",
         "name": "VIP1",
         "partition": "Common",
@@ -26,8 +27,10 @@
         "translatePort": "enabled",
         "vlansDisabled": true,
         "profiles": [
-                    "/Common/http"
-            ],
+            { "name": "tcp-wan-optimized" , "context":"clientside" },
+            { "name": "tcp-lan-optimized" , "context":"serverside" },
+            { "name": "http" }
+                    ],
         "rules": [
                 "/Common/example_uri_1",
                 "/Common/hsl-irule"
